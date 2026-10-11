@@ -1,0 +1,49 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "npx playwright test APIWeb.spec.js",
+    "flowTest": "npx playwright test FlowTest.spec.js",
+    "calendra": "npx playwright test CalendraHandle.spec.js",
+    "excel": "npx playwright test ExcelTest.spec.js",
+    "firstlesson": "npx playwright test firstlesson.spec.js",
+    "page": "npx playwright test FlowTestPO.spec.js",
+    "frame": "npx playwright test Frame_Alert.spec.js",
+    "locator": "npx playwright test LocatorConcept.spec.js",
+    "newtork1": "npx playwright test Network_1.spec.js",
+    "newtork2": "npx playwright test Network_2.spec.js",
+    "newtork3": "npx playwright test Network_3.spec.js",
+    "regression": "npx playright test",
+    "tag": "npx playwright test --grep \"@Web\"",
+    "chrome": "npx playwright test FlowTestPO.spec.js --config playwright.config_1.js --project=chrome",
+    "safari": " npx playwright test FlowTestPO.spec.js --config playwright.config_1.js --project=safari",
+    "debug": "npx playwright test FlowTestPO.spec.js --debug",
+    "config": "npx playwright test FlowTestPO.spec.js --config playwright.config_1.js",
+    "headed": "npx playwright test CalendraHandle.spec.js --headed",
+    "sanity": "npx playwright test --grep \"@Sanity\"",
+    "reportaAllure": "npx playwright test --grep \"@Web\"",
+    "report:generate": "npx allure generate ./allure-results --clean -o ./allure-report",
+    "report:open": "npx allure open ./allure-report",
+    "allure": "npm run reportaAllure && npm run report:generate && npm run report:open",
+    "simplecucumber":"npx cucumber-js --exit",
+    "tagcucumber":"npx cucumber-js --tags \"@Validation\" --exit",
+    "htmlcucumber":"npx cucumber-js --tags \"@Validation\" --parallel 2 --format html:cucumber-report.html --exit",
+    "parallelcucumber":"npx cucumber-js --tags \"@Validation\" --parallel 2 --exit",
+    "retrycucumber":"npx cucumber-js --tags \"@Validation\" --parallel 2 --format html:cucumber-report.html --retry 1 --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^26.0.0",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^13.2.0",
+    "exceljs": "^3.4.0"
+  }
+}
